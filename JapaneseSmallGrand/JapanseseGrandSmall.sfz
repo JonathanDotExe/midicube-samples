@@ -9,17 +9,16 @@
 
 <global>
 ampeg_release=1
-amp_veltrack=85
+amp_veltrack=90
 
 //Soft pedal
 cutoff=10000
-cutoff_oncc67=-3000
-cutoff_smoothcc67=300
 
-<group> //Resoance simulation
+<master>
+<group> //Resonance simulation
 amplitude_oncc64=100
 amplitude_smoothcc64=50
-group_volume=-2
+group_volume=-1
 ampeg_attack=1
 
 <region> sample=PP/JapaneseSmallGrand_PP_33.wav pitch_keycenter=33 lokey=0 hikey=21
@@ -50,7 +49,10 @@ ampeg_attack=1
 <region> sample=PP/JapaneseSmallGrand_PP_105.wav pitch_keycenter=105 lokey=90 hikey=90 loop_mode=one_shot //Hold high notes
 <region> sample=PP/JapaneseSmallGrand_PP_108.wav pitch_keycenter=108 lokey=91 hikey=93 loop_mode=one_shot //Hold high notes
 
-
+<master>
+//Normal Notes
+locc67=0
+hicc67=64
 <group> //FFF
 lovel=125
 hivel=127
@@ -63,32 +65,32 @@ hivel=124
 #include "./FF.txt"
 
 <group> //F
-lovel=100
+lovel=103
 hivel=118
 #define $VELOCITY F
 #include "./F.txt"
 
 <group> //MF
-lovel=76
-hivel=99
+lovel=79
+hivel=102
 #define $VELOCITY MF
 #include "./MF.txt"
 
 <group> //MP
-lovel=52
-hivel=75
+lovel=56
+hivel=78
 #define $VELOCITY MP
 #include "./MP.txt"
 
 <group> //P
-lovel=30
-hivel=51
+lovel=32
+hivel=55
 #define $VELOCITY P
 #include "./P.txt"
 
 <group> //PP
 lovel=13
-hivel=29
+hivel=31
 #define $VELOCITY PP
 #include "./PP.txt"
 
@@ -97,3 +99,48 @@ lovel=1
 hivel=12
 #define $VELOCITY PPP
 #include "./PPP.txt"
+
+<master>
+locc67=65
+hicc67=127
+//Soft Notes
+volume=-1
+cutoff=2200
+fil_type=lpf_1p
+
+<group> //F
+lovel=109
+hivel=127
+#define $VELOCITY F
+#include "./F.txt"
+
+<group> //MF
+lovel=82
+hivel=108
+#define $VELOCITY MF
+#include "./MF.txt"
+
+<group> //MP
+lovel=60
+hivel=81
+#define $VELOCITY MP
+#include "./MP.txt"
+
+<group> //P
+lovel=36
+hivel=59
+#define $VELOCITY P
+#include "./P.txt"
+
+<group> //PP
+lovel=18
+hivel=25
+#define $VELOCITY PP
+#include "./PP.txt"
+
+<group> //PPP
+lovel=1
+hivel=17
+#define $VELOCITY PPP
+#include "./PPP.txt"
+
