@@ -9,15 +9,50 @@
 
 <global>
 ampeg_release=1
-amp_veltrack=80
+amp_veltrack=85
 
 //Soft pedal
 cutoff=10000
-cutoff_oncc67=-3600
+cutoff_oncc67=-3000
+cutoff_smoothcc67=300
+
+<master> //Resoance simulation
+amplitude_oncc64=100
+amplitude_smoothcc64=50
+group_volume=-2
+ampeg_attack=1
+<group>
+<region> sample=PP/JapaneseSmallGrand_PP_33.wav pitch_keycenter=33 lokey=0 hikey=21
+<region> sample=PP/JapaneseSmallGrand_PP_36.wav pitch_keycenter=36 lokey=22 hikey=24
+<region> sample=PP/JapaneseSmallGrand_PP_39.wav pitch_keycenter=39 lokey=25 hikey=27
+<region> sample=PP/JapaneseSmallGrand_PP_42.wav pitch_keycenter=42 lokey=28 hikey=30
+<region> sample=PP/JapaneseSmallGrand_PP_45.wav pitch_keycenter=45 lokey=31 hikey=33
+<region> sample=PP/JapaneseSmallGrand_PP_48.wav pitch_keycenter=48 lokey=34 hikey=36
+<region> sample=PP/JapaneseSmallGrand_PP_51.wav pitch_keycenter=51 lokey=37 hikey=39
+<region> sample=PP/JapaneseSmallGrand_PP_54.wav pitch_keycenter=54 lokey=40 hikey=42
+<region> sample=PP/JapaneseSmallGrand_PP_57.wav pitch_keycenter=57 lokey=43 hikey=45
+<region> sample=PP/JapaneseSmallGrand_PP_60.wav pitch_keycenter=60 lokey=46 hikey=48
+<region> sample=PP/JapaneseSmallGrand_PP_63.wav pitch_keycenter=63 lokey=49 hikey=51
+<region> sample=PP/JapaneseSmallGrand_PP_66.wav pitch_keycenter=66 lokey=52 hikey=54
+<region> sample=PP/JapaneseSmallGrand_PP_69.wav pitch_keycenter=69 lokey=55 hikey=57
+<region> sample=PP/JapaneseSmallGrand_PP_72.wav pitch_keycenter=72 lokey=58 hikey=60
+<region> sample=PP/JapaneseSmallGrand_PP_75.wav pitch_keycenter=75 lokey=61 hikey=63
+<region> sample=PP/JapaneseSmallGrand_PP_81.wav pitch_keycenter=81 lokey=64 hikey=66
+<region> sample=PP/JapaneseSmallGrand_PP_84.wav pitch_keycenter=84 lokey=67 hikey=69
+<region> sample=PP/JapaneseSmallGrand_PP_87.wav pitch_keycenter=87 lokey=70 hikey=72
+<region> sample=PP/JapaneseSmallGrand_PP_90.wav pitch_keycenter=90 lokey=73 hikey=75
+<region> sample=PP/JapaneseSmallGrand_PP_93.wav pitch_keycenter=93 lokey=76 hikey=78
+<region> sample=PP/JapaneseSmallGrand_PP_96.wav pitch_keycenter=96 lokey=79 hikey=81
+<region> sample=PP/JapaneseSmallGrand_PP_99.wav pitch_keycenter=99 lokey=82 hikey=84
+<region> sample=PP/JapaneseSmallGrand_PP_102.wav pitch_keycenter=102 lokey=85 hikey=87
+<region> sample=PP/JapaneseSmallGrand_PP_105.wav pitch_keycenter=105 lokey=88 hikey=89
+<group> loop_mode=one_shot //Hold high notes
+<region> sample=PP/JapaneseSmallGrand_PP_105.wav pitch_keycenter=105 lokey=90 hikey=90
+<region> sample=PP/JapaneseSmallGrand_PP_108.wav pitch_keycenter=108 lokey=91 hikey=93
 
 
 <master> //FFF
-lovel=120
+lovel=124
 hivel=127
 <group>
 <region> sample=FFF/JapaneseSmallGrand_FFF_21.wav pitch_keycenter=21 lokey=0 hikey=21
@@ -55,8 +90,8 @@ hivel=127
 
 
 <master> //FF
-lovel=109
-hivel=119
+lovel=117
+hivel=123
 <group>
 <region> sample=FF/JapaneseSmallGrand_FF_21.wav pitch_keycenter=21 lokey=0 hikey=21
 <region> sample=FF/JapaneseSmallGrand_FF_24.wav pitch_keycenter=24 lokey=22 hikey=24
@@ -92,8 +127,8 @@ hivel=119
 <region> sample=FF/JapaneseSmallGrand_FF_108.wav pitch_keycenter=108 lokey=106 hikey=127
 
 <master> //F
-lovel=90
-hivel=108
+lovel=99
+hivel=116
 <group>
 <region> sample=F/JapaneseSmallGrand_F_21.wav pitch_keycenter=21 lokey=0 hikey=21
 <region> sample=F/JapaneseSmallGrand_F_24.wav pitch_keycenter=24 lokey=22 hikey=24
@@ -129,8 +164,8 @@ hivel=108
 <region> sample=F/JapaneseSmallGrand_F_108.wav pitch_keycenter=108 lokey=106 hikey=127
 
 <master> //MF
-lovel=70
-hivel=89
+lovel=76
+hivel=98
 <group>
 <region> sample=MF/JapaneseSmallGrand_MF_21.wav pitch_keycenter=21 lokey=0 hikey=21
 <region> sample=MF/JapaneseSmallGrand_MF_24.wav pitch_keycenter=24 lokey=22 hikey=24
@@ -166,8 +201,8 @@ hivel=89
 <region> sample=MF/JapaneseSmallGrand_MF_108.wav pitch_keycenter=108 lokey=106 hikey=127
 
 <master> //MP
-lovel=49
-hivel=69
+lovel=52
+hivel=75
 <group>
 <region> sample=MP/JapaneseSmallGrand_MP_21.wav pitch_keycenter=21 lokey=0 hikey=21
 <region> sample=MP/JapaneseSmallGrand_MP_24.wav pitch_keycenter=24 lokey=22 hikey=24
@@ -203,8 +238,8 @@ hivel=69
 <region> sample=MP/JapaneseSmallGrand_MP_108.wav pitch_keycenter=108 lokey=106 hikey=127
 
 <master> //P
-lovel=34
-hivel=48
+lovel=30
+hivel=51
 <group>
 <region> sample=P/JapaneseSmallGrand_P_21.wav pitch_keycenter=21 lokey=0 hikey=21
 <region> sample=P/JapaneseSmallGrand_P_24.wav pitch_keycenter=24 lokey=22 hikey=24
@@ -240,8 +275,8 @@ hivel=48
 <region> sample=P/JapaneseSmallGrand_P_108.wav pitch_keycenter=108 lokey=106 hikey=127
 
 <master> //PP
-lovel=17
-hivel=33
+lovel=11
+hivel=29
 <group>
 <region> sample=PP/JapaneseSmallGrand_PP_21.wav pitch_keycenter=21 lokey=0 hikey=21
 <region> sample=PP/JapaneseSmallGrand_PP_24.wav pitch_keycenter=24 lokey=22 hikey=24
@@ -278,7 +313,7 @@ hivel=33
 
 <master> //PPP
 lovel=1
-hivel=16
+hivel=10
 <group>
 <region> sample=PPP/JapaneseSmallGrand_PPP_21.wav pitch_keycenter=21 lokey=0 hikey=21
 <region> sample=PPP/JapaneseSmallGrand_PPP_24.wav pitch_keycenter=24 lokey=22 hikey=24
@@ -312,36 +347,3 @@ hivel=16
 <region> sample=PPP/JapaneseSmallGrand_PPP_102.wav pitch_keycenter=102 lokey=100 hikey=102
 <region> sample=PPP/JapaneseSmallGrand_PPP_105.wav pitch_keycenter=105 lokey=103 hikey=105
 <region> sample=PPP/JapaneseSmallGrand_PPP_108.wav pitch_keycenter=108 lokey=106 hikey=127
-
-<master> //Resoance simulation
-amplitude_oncc64=100
-group_volume=-3
-ampeg_attack=1
-<group>
-<region> sample=PPP/JapaneseSmallGrand_PPP_33.wav pitch_keycenter=33 lokey=0 hikey=21
-<region> sample=PPP/JapaneseSmallGrand_PPP_36.wav pitch_keycenter=36 lokey=22 hikey=24
-<region> sample=PPP/JapaneseSmallGrand_PPP_39.wav pitch_keycenter=39 lokey=25 hikey=27
-<region> sample=PPP/JapaneseSmallGrand_PPP_42.wav pitch_keycenter=42 lokey=28 hikey=30
-<region> sample=PPP/JapaneseSmallGrand_PPP_45.wav pitch_keycenter=45 lokey=31 hikey=33
-<region> sample=PPP/JapaneseSmallGrand_PPP_48.wav pitch_keycenter=48 lokey=34 hikey=36
-<region> sample=PPP/JapaneseSmallGrand_PPP_51.wav pitch_keycenter=51 lokey=37 hikey=39
-<region> sample=PPP/JapaneseSmallGrand_PPP_54.wav pitch_keycenter=54 lokey=40 hikey=42
-<region> sample=PPP/JapaneseSmallGrand_PPP_57.wav pitch_keycenter=57 lokey=43 hikey=45
-<region> sample=PPP/JapaneseSmallGrand_PPP_60.wav pitch_keycenter=60 lokey=46 hikey=48
-<region> sample=PPP/JapaneseSmallGrand_PPP_63.wav pitch_keycenter=63 lokey=49 hikey=51
-<region> sample=PPP/JapaneseSmallGrand_PPP_66.wav pitch_keycenter=66 lokey=52 hikey=54
-<region> sample=PPP/JapaneseSmallGrand_PPP_69.wav pitch_keycenter=69 lokey=55 hikey=57
-<region> sample=PPP/JapaneseSmallGrand_PPP_72.wav pitch_keycenter=72 lokey=58 hikey=60
-<region> sample=PPP/JapaneseSmallGrand_PPP_75.wav pitch_keycenter=75 lokey=61 hikey=63
-<region> sample=PPP/JapaneseSmallGrand_PPP_81.wav pitch_keycenter=81 lokey=64 hikey=66
-<region> sample=PPP/JapaneseSmallGrand_PPP_84.wav pitch_keycenter=84 lokey=67 hikey=69
-<region> sample=PPP/JapaneseSmallGrand_PPP_87.wav pitch_keycenter=87 lokey=70 hikey=72
-<region> sample=PPP/JapaneseSmallGrand_PPP_90.wav pitch_keycenter=90 lokey=73 hikey=75
-<region> sample=PPP/JapaneseSmallGrand_PPP_93.wav pitch_keycenter=93 lokey=76 hikey=78
-<region> sample=PPP/JapaneseSmallGrand_PPP_96.wav pitch_keycenter=96 lokey=79 hikey=81
-<region> sample=PPP/JapaneseSmallGrand_PPP_99.wav pitch_keycenter=99 lokey=82 hikey=84
-<region> sample=PPP/JapaneseSmallGrand_PPP_102.wav pitch_keycenter=102 lokey=85 hikey=87
-<region> sample=PPP/JapaneseSmallGrand_PPP_105.wav pitch_keycenter=105 lokey=88 hikey=89
-<group> loop_mode=one_shot //Hold high notes
-<region> sample=PPP/JapaneseSmallGrand_PPP_105.wav pitch_keycenter=105 lokey=90 hikey=90
-<region> sample=PPP/JapaneseSmallGrand_PPP_108.wav pitch_keycenter=108 lokey=91 hikey=93
