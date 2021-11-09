@@ -9,7 +9,7 @@
 
 <global>
 ampeg_release=1
-amp_veltrack=90
+amp_veltrack=85
 
 //Soft pedal
 cutoff=10000
@@ -61,43 +61,36 @@ hivel=127
 <group> //FF
 lovel=119
 hivel=124
-#define $VELOCITY FF
 #include "./FF.txt"
 
 <group> //F
 lovel=103
 hivel=118
-#define $VELOCITY F
 #include "./F.txt"
 
 <group> //MF
 lovel=79
 hivel=102
-#define $VELOCITY MF
 #include "./MF.txt"
 
 <group> //MP
-lovel=56
+lovel=54
 hivel=78
-#define $VELOCITY MP
 #include "./MP.txt"
 
 <group> //P
-lovel=32
-hivel=55
-#define $VELOCITY P
+lovel=30
+hivel=53
 #include "./P.txt"
 
 <group> //PP
-lovel=13
-hivel=31
-#define $VELOCITY PP
+lovel=11
+hivel=29
 #include "./PP.txt"
 
 <group> //PPP
 lovel=1
-hivel=12
-#define $VELOCITY PPP
+hivel=10
 #include "./PPP.txt"
 
 <master>
@@ -111,36 +104,30 @@ fil_type=lpf_1p
 <group> //F
 lovel=109
 hivel=127
-#define $VELOCITY F
 #include "./F.txt"
 
 <group> //MF
 lovel=82
 hivel=108
-#define $VELOCITY MF
 #include "./MF.txt"
 
 <group> //MP
 lovel=60
 hivel=81
-#define $VELOCITY MP
 #include "./MP.txt"
 
 <group> //P
 lovel=36
 hivel=59
-#define $VELOCITY P
 #include "./P.txt"
 
 <group> //PP
 lovel=18
 hivel=25
-#define $VELOCITY PP
 #include "./PP.txt"
 
 <group> //PPP
 lovel=1
 hivel=17
-#define $VELOCITY PPP
 #include "./PPP.txt"
 

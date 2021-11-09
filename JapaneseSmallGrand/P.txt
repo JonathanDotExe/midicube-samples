@@ -1,2 +1,2 @@
-#define $VELOCITY MP
+#define $VELOCITY P
 #include "./notes.txt"
