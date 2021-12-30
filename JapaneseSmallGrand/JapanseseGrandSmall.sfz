@@ -5,19 +5,40 @@
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
 <control>
+#define $RESONANCE_CC 16
+#define $VELTRACK_CC 17
+#define $STEREO_CC 18
+#define $RELEASE_CC 19
+#define $RELEASE_KEYTRACK_CC 20
 
+label_cc$RESONANCE_CC=String Resonance
+label_cc$VELTRACK_CC=Velocity Amount
+label_cc$STEREO_CC=Stereo
+label_cc$RELEASE_CC=Release
+label_cc$RELEASE_KEYTRACK_CC=Release Keytrack
+
+set_hdcc$RESONANCE_CC=1.0
+set_hdcc$VELTRACK_CC=0.85
+set_hdcc$STEREO_CC=0.2
+set_hdcc$RELEASE_CC=0.35
+set_hdcc$RELEASE_KEYTRACK_CC=0.2
 
 <global>
-ampeg_release=1
-amp_veltrack=85
+
+ampeg_release=0
+ampeg_release_oncc$RELEASE_CC=2
+amp_veltrack=0
+amp_veltrack_oncc$VELTRACK_CC=100
 
 //Soft pedal
 cutoff=10000
+
 
 <master>
 <group> //Resonance simulation
 amplitude_oncc64=100
 amplitude_smoothcc64=50
+amplitude_oncc$RESONANCE_CC=100
 group_volume=-1
 ampeg_attack=1
 
@@ -54,13 +75,13 @@ ampeg_attack=1
 locc67=0
 hicc67=64
 <group> //FFF
-lovel=125
+lovel=123
 hivel=127
 #include "./FFF.txt"
 
 <group> //FF
 lovel=119
-hivel=124
+hivel=122
 #include "./FF.txt"
 
 <group> //F
