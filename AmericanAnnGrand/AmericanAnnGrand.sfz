@@ -1,0 +1,154 @@
+//------------------------------------------------------------------------------------------------------------------------------------------------
+// sFz DeFinition File
+// Version 2
+// created by Bjoerns Sample Mapper v0.643  -  http://www.bjoernbojahr.de/
+//------------------------------------------------------------------------------------------------------------------------------------------------
+
+<control>
+#define $RESONANCE_CC 16
+#define $VELTRACK_CC 17
+#define $STEREO_CC 18
+#define $RELEASE_CC 19
+#define $RELEASE_KEYTRACK_CC 20
+
+label_cc$RESONANCE_CC=String Resonance
+label_cc$VELTRACK_CC=Velocity Amount
+label_cc$STEREO_CC=Stereo
+label_cc$RELEASE_CC=Release
+label_cc$RELEASE_KEYTRACK_CC=Release Keytrack
+
+set_hdcc$RESONANCE_CC=0.75
+set_hdcc$VELTRACK_CC=0.90
+set_hdcc$STEREO_CC=0.2
+set_hdcc$RELEASE_CC=0.35
+set_hdcc$RELEASE_KEYTRACK_CC=0.2
+
+<global>
+
+ampeg_release=0
+ampeg_release_oncc$RELEASE_CC=2
+amp_veltrack=0
+amp_veltrack_oncc$VELTRACK_CC=100
+
+//Soft pedal
+cutoff=10000
+
+
+<master>
+<group> //Resonance simulation
+amplitude_oncc64=100
+amplitude_smoothcc64=50
+amplitude_oncc$RESONANCE_CC=100
+group_volume=-1
+ampeg_attack=1
+
+<region> sample=PP/AmericanAnn_PP_33.flac pitch_keycenter=33 lokey=0 hikey=21
+<region> sample=PP/AmericanAnn_PP_36.flac pitch_keycenter=36 lokey=22 hikey=24
+<region> sample=PP/AmericanAnn_PP_39.flac pitch_keycenter=39 lokey=25 hikey=27
+<region> sample=PP/AmericanAnn_PP_42.flac pitch_keycenter=42 lokey=28 hikey=30
+<region> sample=PP/AmericanAnn_PP_45.flac pitch_keycenter=45 lokey=31 hikey=33
+<region> sample=PP/AmericanAnn_PP_48.flac pitch_keycenter=48 lokey=34 hikey=36
+<region> sample=PP/AmericanAnn_PP_51.flac pitch_keycenter=51 lokey=37 hikey=39
+<region> sample=PP/AmericanAnn_PP_54.flac pitch_keycenter=54 lokey=40 hikey=42
+<region> sample=PP/AmericanAnn_PP_57.flac pitch_keycenter=57 lokey=43 hikey=45
+<region> sample=PP/AmericanAnn_PP_60.flac pitch_keycenter=60 lokey=46 hikey=48
+<region> sample=PP/AmericanAnn_PP_63.flac pitch_keycenter=63 lokey=49 hikey=51
+<region> sample=PP/AmericanAnn_PP_66.flac pitch_keycenter=66 lokey=52 hikey=54
+<region> sample=PP/AmericanAnn_PP_69.flac pitch_keycenter=69 lokey=55 hikey=57
+<region> sample=PP/AmericanAnn_PP_72.flac pitch_keycenter=72 lokey=58 hikey=60
+<region> sample=PP/AmericanAnn_PP_75.flac pitch_keycenter=75 lokey=61 hikey=63
+<region> sample=PP/AmericanAnn_PP_81.flac pitch_keycenter=81 lokey=64 hikey=66
+<region> sample=PP/AmericanAnn_PP_84.flac pitch_keycenter=84 lokey=67 hikey=69
+<region> sample=PP/AmericanAnn_PP_87.flac pitch_keycenter=87 lokey=70 hikey=72
+<region> sample=PP/AmericanAnn_PP_90.flac pitch_keycenter=90 lokey=73 hikey=75
+<region> sample=PP/AmericanAnn_PP_93.flac pitch_keycenter=93 lokey=76 hikey=78
+<region> sample=PP/AmericanAnn_PP_96.flac pitch_keycenter=96 lokey=79 hikey=81
+<region> sample=PP/AmericanAnn_PP_99.flac pitch_keycenter=99 lokey=82 hikey=84
+<region> sample=PP/AmericanAnn_PP_102.flac pitch_keycenter=102 lokey=85 hikey=87
+<region> sample=PP/AmericanAnn_PP_105.flac pitch_keycenter=105 lokey=88 hikey=89
+
+<region> sample=PP/AmericanAnn_PP_105.flac pitch_keycenter=105 lokey=90 hikey=90 loop_mode=one_shot //Hold high notes
+<region> sample=PP/AmericanAnn_PP_108.flac pitch_keycenter=108 lokey=91 hikey=93 loop_mode=one_shot //Hold high notes
+
+<master>
+//Normal Notes
+locc67=0
+hicc67=64
+<group> //FFF
+lovel=123
+hivel=127
+#include "./FFF.txt"
+
+<group> //FF
+lovel=116
+hivel=122
+#include "./FF.txt"
+
+<group> //F
+lovel=103
+hivel=115
+#include "./F.txt"
+
+<group> //MF
+lovel=86
+hivel=102
+#include "./MF.txt"
+
+<group> //MP
+lovel=65
+hivel=85
+#include "./MP.txt"
+
+<group> //P
+lovel=37
+hivel=64
+#include "./P.txt"
+
+<group> //PP
+lovel=21
+hivel=36
+#include "./PP.txt"
+
+<group> //PPP
+lovel=1
+hivel=20
+#include "./PPP.txt"
+
+<master>
+locc67=65
+hicc67=127
+//Soft Notes
+volume=-1
+cutoff=2200
+fil_type=lpf_1p
+
+<group> //F
+lovel=109
+hivel=127
+#include "./F.txt"
+
+<group> //MF
+lovel=82
+hivel=108
+#include "./MF.txt"
+
+<group> //MP
+lovel=60
+hivel=81
+#include "./MP.txt"
+
+<group> //P
+lovel=36
+hivel=59
+#include "./P.txt"
+
+<group> //PP
+lovel=18
+hivel=25
+#include "./PP.txt"
+
+<group> //PPP
+lovel=1
+hivel=17
+#include "./PPP.txt"
+
