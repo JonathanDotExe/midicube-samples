@@ -18,7 +18,7 @@ label_cc$RELEASE_CC=Release
 label_cc$RELEASE_KEYTRACK_CC=Release Keytrack
 
 set_hdcc$RESONANCE_CC=1.0
-set_hdcc$VELTRACK_CC=0.85
+set_hdcc$VELTRACK_CC=0.65
 set_hdcc$STEREO_CC=0.2
 set_hdcc$RELEASE_CC=0.35
 set_hdcc$RELEASE_KEYTRACK_CC=0.2
