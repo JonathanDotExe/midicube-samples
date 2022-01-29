@@ -80,33 +80,33 @@ hivel=127
 #include "./FFF.txt"
 
 <group> //FF
-lovel=116
+lovel=117
 hivel=122
 #include "./FF.txt"
 
 <group> //F
-lovel=103
-hivel=115
+lovel=105
+hivel=116
 #include "./F.txt"
 
 <group> //MF
-lovel=86
-hivel=102
+lovel=89
+hivel=104
 #include "./MF.txt"
 
 <group> //MP
-lovel=68
-hivel=85
+lovel=71
+hivel=88
 #include "./MP.txt"
 
 <group> //P
-lovel=39
-hivel=67
+lovel=41
+hivel=70
 #include "./P.txt"
 
 <group> //PP
 lovel=21
-hivel=38
+hivel=40
 #include "./PP.txt"
 
 <group> //PPP
@@ -128,27 +128,27 @@ hivel=127
 #include "./F.txt"
 
 <group> //MF
-lovel=82
+lovel=91
 hivel=108
 #include "./MF.txt"
 
 <group> //MP
-lovel=60
-hivel=81
+lovel=75
+hivel=90
 #include "./MP.txt"
 
 <group> //P
-lovel=36
-hivel=59
+lovel=46
+hivel=74
 #include "./P.txt"
 
 <group> //PP
-lovel=18
-hivel=25
+lovel=21
+hivel=45
 #include "./PP.txt"
 
 <group> //PPP
 lovel=1
-hivel=17
+hivel=20
 #include "./PPP.txt"
 
